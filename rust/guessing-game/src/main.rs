@@ -26,7 +26,7 @@ fn main() {
             .read_line(&mut guess)
             .expect("Failed to read line");
         if guess == "quit" {
-            process::exit();
+            process::exit(0);
         }
 
             let guess: u32 = match guess.trim().parse() {
