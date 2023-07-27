@@ -25,8 +25,9 @@ fn main() {
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read line");
+        
         if guess == "quit" {
-            process::exit(0);
+            panic!("Bye!")
         }
 
             let guess: u32 = match guess.trim().parse() {
