@@ -1,11 +1,12 @@
 use std::io;
 use rand::Rng;
 use std::cmp::Ordering;
+use std::process;
 
 fn main() {
 
     println!("Welcome to the guessing game!");
-    println!("Type 'quit' to quit")
+    println!("Type 'quit' to quit");
 
     loop {
 
@@ -25,7 +26,7 @@ fn main() {
             .read_line(&mut guess)
             .expect("Failed to read line");
         if guess == "quit" {
-            return "Bye!";
+            process::exit();
         }
 
             let guess: u32 = match guess.trim().parse() {
